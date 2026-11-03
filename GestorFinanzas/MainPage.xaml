@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:strings="clr-namespace:GestorFinanzas.Strings"
+             x:Class="GestorFinanzas.MainPage"
+             Title="{Binding [Login_Titulo], Source={x:Static strings:Tr.Instance}}">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,60"
+            Spacing="20">
+
+            <Label
+                Text="Gestor de Finanzas"
+                FontSize="28"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="LblMensaje"
+                TextColor="Red"
+                IsVisible="False"
+                HorizontalOptions="Center" />
+
+            <Entry
+                x:Name="EntryCorreo"
+                Placeholder="{Binding [Login_CorreoPlaceholder], Source={x:Static strings:Tr.Instance}}"
+                Keyboard="Email" />
+
+            <Entry
+                x:Name="EntryContrasena"
+                Placeholder="{Binding [Login_ContrasenaPlaceholder], Source={x:Static strings:Tr.Instance}}"
+                IsPassword="True" />
+
+            <Button
+                x:Name="BtnOlvideContrasena"
+                Text="{Binding [Login_OlvideContrasena], Source={x:Static strings:Tr.Instance}}"
+                BackgroundColor="Transparent"
+                TextColor="{StaticResource Primary}"
+                FontSize="13"
+                HorizontalOptions="End"
+                Clicked="OnOlvideContrasenaClicked" />
+
+            <Button
+                x:Name="BtnIniciarSesion"
+                Text="{Binding [Login_Titulo], Source={x:Static strings:Tr.Instance}}"
+                Clicked="OnIniciarSesionClicked" />
+
+            <Button
+                x:Name="BtnRegistrarse"
+                Text="{Binding [Login_CrearCuenta], Source={x:Static strings:Tr.Instance}}"
+                BackgroundColor="Transparent"
+                TextColor="{StaticResource Primary}"
+                Clicked="OnRegistrarseClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

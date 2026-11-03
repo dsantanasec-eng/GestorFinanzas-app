@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "981284009855",
+    "project_id": "gestorfinanzas-bed0a",
+    "storage_bucket": "gestorfinanzas-bed0a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981284009855:android:f8c7246b1b51b232458c4a",
+        "android_client_info": {
+          "package_name": "com.diomedes.gestorfinanzas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc1hCUIvRYbHI4Z0SmowmoupDqmKDUvqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981284009855:android:f5cab04bfa3ed8dd458c4a",
+        "android_client_info": {
+          "package_name": "com.diomedesmonero.gestorfinanzas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc1hCUIvRYbHI4Z0SmowmoupDqmKDUvqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

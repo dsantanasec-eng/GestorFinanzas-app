@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="GestorFinanzas.AjustesPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:admob="clr-namespace:Plugin.AdMob;assembly=Plugin.AdMob"
+    xmlns:strings="clr-namespace:GestorFinanzas.Strings"
+    Title="{Binding [Ajustes_Titulo], Source={x:Static strings:Tr.Instance}}">
+
+    <Grid RowDefinitions="*,Auto">
+
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Padding="20" Spacing="20">
+
+                <Label Text="{Binding [Ajustes_RecordatorioPagoTitulo], Source={x:Static strings:Tr.Instance}}" FontSize="20" FontAttributes="Bold" />
+                <Label Text="{Binding [Ajustes_RecordatorioPagoDesc], Source={x:Static strings:Tr.Instance}}" FontSize="13" TextColor="Gray" />
+
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="{Binding [Ajustes_Activar], Source={x:Static strings:Tr.Instance}}" VerticalOptions="Center" />
+                    <Switch x:Name="SwitchPago" />
+                </HorizontalStackLayout>
+
+                <Label Text="{Binding [Ajustes_ProximaFechaPago], Source={x:Static strings:Tr.Instance}}" />
+                <DatePicker x:Name="DatePickerPago" />
+
+                <Label Text="{Binding [Ajustes_Frecuencia], Source={x:Static strings:Tr.Instance}}" />
+                <!-- Nota: estas opciones se dejan en español a propósito; AjustesPage.xaml.cs
+                     compara el texto seleccionado tal cual, así que traducirlas aquí sin
+                     tocar ese código rompería el recordatorio de pago. -->
+                <Picker x:Name="PickerFrecuencia">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Semanal</x:String>
+                            <x:String>Quincenal</x:String>
+                            <x:String>Mensual</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Text="{Binding [Ajustes_HoraRecordatorio], Source={x:Static strings:Tr.Instance}}" />
+                <TimePicker x:Name="TimePickerPago" />
+
+                <BoxView HeightRequest="1" Color="LightGray" Margin="0,10" />
+
+                <Label Text="{Binding [Ajustes_RecordatorioAhorroTitulo], Source={x:Static strings:Tr.Instance}}" FontSize="20" FontAttributes="Bold" />
+                <Label Text="{Binding [Ajustes_RecordatorioAhorroDesc], Source={x:Static strings:Tr.Instance}}" FontSize="13" TextColor="Gray" />
+
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="{Binding [Ajustes_Activar], Source={x:Static strings:Tr.Instance}}" VerticalOptions="Center" />
+                    <Switch x:Name="SwitchAhorro" />
+                </HorizontalStackLayout>
+
+                <Label Text="{Binding [Ajustes_HoraRecordatorio], Source={x:Static strings:Tr.Instance}}" />
+                <TimePicker x:Name="TimePickerAhorro" />
+
+                <Button x:Name="BotonGuardar" Text="{Binding [Ajustes_GuardarCambios], Source={x:Static strings:Tr.Instance}}" Clicked="BotonGuardar_Clicked" Margin="0,20,0,0" />
+
+                <BoxView HeightRequest="1" Color="LightGray" Margin="0,10" />
+
+                <Label Text="{Binding [Ajustes_IdiomaTitulo], Source={x:Static strings:Tr.Instance}}" FontSize="20" FontAttributes="Bold" />
+                <Label Text="{Binding [Ajustes_IdiomaDesc], Source={x:Static strings:Tr.Instance}}" FontSize="13" TextColor="Gray" />
+
+                <!-- Las 3 opciones se arman en código (AjustesPage.xaml.cs) para poder
+                     guardar el idioma elegido y aplicarlo con LocalizationManager. -->
+                <Picker x:Name="PickerIdioma" SelectedIndexChanged="PickerIdioma_SelectedIndexChanged" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Banner de anuncios -->
+        <Grid Grid.Row="1" BackgroundColor="LightGray" HeightRequest="60" HorizontalOptions="Fill">
+            <admob:BannerAd x:Name="BannerAjustes"
+                             AdUnitId="ca-app-pub-4227427045418783/7265940366"
+                             AdSize="Banner"
+                             WidthRequest="320"
+                             HeightRequest="50"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center" />
+        </Grid>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="GestorFinanzas.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:GestorFinanzas"
+    Title="GestorFinanzas">
+
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Movimientos"
+        ContentTemplate="{DataTemplate local:MovimientosPage}"
+        Route="MovimientosPage" />
+
+    <ShellContent
+        Title="Plan de Ahorro"
+        ContentTemplate="{DataTemplate local:PlanAhorroPage}"
+        Route="PlanAhorroPage" />
+
+    <ShellContent
+        Title="Ajustes"
+        ContentTemplate="{DataTemplate local:AjustesPage}"
+        Route="AjustesPage" />
+
+</Shell>

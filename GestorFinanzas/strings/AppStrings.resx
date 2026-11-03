@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+
+	<!-- Comunes -->
+	<data name="Comun_Cancelar" xml:space="preserve"><value>Cancel</value></data>
+	<data name="Comun_Error" xml:space="preserve"><value>Error</value></data>
+	<data name="Comun_DatoInvalido" xml:space="preserve"><value>Invalid value</value></data>
+	<data name="Comun_SiBorrar" xml:space="preserve"><value>Yes, delete</value></data>
+	<data name="Comun_ErrorAlBorrar" xml:space="preserve"><value>Error deleting</value></data>
+	<data name="Comun_ErrorAlGuardar" xml:space="preserve"><value>Error saving</value></data>
+	<data name="Comun_ErrorAlCargar" xml:space="preserve"><value>Error loading</value></data>
+	<data name="Comun_MonedaPregunta" xml:space="preserve"><value>Which currency?</value></data>
+	<data name="Comun_SinCategoria" xml:space="preserve"><value>No category</value></data>
+
+	<!-- Frecuencia -->
+	<data name="Frecuencia_Diario" xml:space="preserve"><value>Daily</value></data>
+	<data name="Frecuencia_Semanal" xml:space="preserve"><value>Weekly</value></data>
+	<data name="Frecuencia_Quincenal" xml:space="preserve"><value>Biweekly</value></data>
+	<data name="Frecuencia_Mensual" xml:space="preserve"><value>Monthly</value></data>
+	<data name="Frecuencia_Dia" xml:space="preserve"><value>day</value></data>
+	<data name="Frecuencia_SemanaSing" xml:space="preserve"><value>week</value></data>
+	<data name="Frecuencia_QuincenaSing" xml:space="preserve"><value>two-week period</value></data>
+	<data name="Frecuencia_MesSing" xml:space="preserve"><value>month</value></data>
+	<data name="Frecuencia_PeriodoSing" xml:space="preserve"><value>period</value></data>
+
+	<!-- AjustesPage -->
+	<data name="Ajustes_Titulo" xml:space="preserve"><value>Settings</value></data>
+	<data name="Ajustes_RecordatorioPagoTitulo" xml:space="preserve"><value>Payment reminder</value></data>
+	<data name="Ajustes_RecordatorioPagoDesc" xml:space="preserve"><value>We'll remind you when your payday arrives so you can log your income.</value></data>
+	<data name="Ajustes_Activar" xml:space="preserve"><value>Enable</value></data>
+	<data name="Ajustes_ProximaFechaPago" xml:space="preserve"><value>Next payment date</value></data>
+	<data name="Ajustes_Frecuencia" xml:space="preserve"><value>Frequency</value></data>
+	<data name="Ajustes_HoraRecordatorio" xml:space="preserve"><value>Reminder time</value></data>
+	<data name="Ajustes_RecordatorioAhorroTitulo" xml:space="preserve"><value>Daily savings reminder</value></data>
+	<data name="Ajustes_RecordatorioAhorroDesc" xml:space="preserve"><value>We'll ask you every day if you saved, so you can track your goal.</value></data>
+	<data name="Ajustes_GuardarCambios" xml:space="preserve"><value>Save changes</value></data>
+	<data name="Ajustes_GuardadoTitulo" xml:space="preserve"><value>Done</value></data>
+	<data name="Ajustes_GuardadoDesc" xml:space="preserve"><value>Your reminders were saved.</value></data>
+	<data name="Ajustes_IdiomaTitulo" xml:space="preserve"><value>Language</value></data>
+	<data name="Ajustes_IdiomaDesc" xml:space="preserve"><value>Choose the app's language.</value></data>
+	<data name="Ajustes_IdiomaAutomatico" xml:space="preserve"><value>Automatic (phone language)</value></data>
+	<data name="Ajustes_IdiomaCambiadoAviso" xml:space="preserve"><value>Close and reopen the app for the new language to apply everywhere.</value></data>
+
+	<!-- PlanAhorroPage -->
+	<data name="PlanAhorro_Titulo" xml:space="preserve"><value>Savings Plan</value></data>
+	<data name="PlanAhorro_SinMetaTitulo" xml:space="preserve"><value>You don't have a savings goal yet</value></data>
+	<data name="PlanAhorro_SinMetaDesc" xml:space="preserve"><value>Create one and we'll tell you how much to set aside daily, weekly, biweekly or monthly to reach it.</value></data>
+	<data name="PlanAhorro_RegistrarAporte" xml:space="preserve"><value>💰 Log today's contribution</value></data>
+	<data name="PlanAhorro_BorrarMeta" xml:space="preserve"><value>Delete goal</value></data>
+	<data name="PlanAhorro_CrearMeta" xml:space="preserve"><value>Create savings goal</value></data>
+	<data name="PlanAhorro_EditarMeta" xml:space="preserve"><value>Edit savings goal</value></data>
+	<data name="PlanAhorro_NombreMetaTitulo" xml:space="preserve"><value>Goal name</value></data>
+	<data name="PlanAhorro_NombreMetaEjemplo" xml:space="preserve"><value>E.g.: Trip, Emergency fund, Car...</value></data>
+	<data name="PlanAhorro_NombrePorDefecto" xml:space="preserve"><value>My savings goal</value></data>
+	<data name="PlanAhorro_MontoTotalTitulo" xml:space="preserve"><value>How much do you want to save in total?</value></data>
+	<data name="PlanAhorro_MontoTotalEjemplo" xml:space="preserve"><value>E.g.: 400000</value></data>
+	<data name="PlanAhorro_MetaInvalida" xml:space="preserve"><value>The goal must be a number greater than 0.</value></data>
+	<data name="PlanAhorro_PlazoTitulo" xml:space="preserve"><value>How long do you want to take to reach it?</value></data>
+	<data name="PlanAhorro_Plazo3Meses" xml:space="preserve"><value>3 months</value></data>
+	<data name="PlanAhorro_Plazo6Meses" xml:space="preserve"><value>6 months</value></data>
+	<data name="PlanAhorro_Plazo1Anio" xml:space="preserve"><value>1 year</value></data>
+	<data name="PlanAhorro_Plazo2Anios" xml:space="preserve"><value>2 years</value></data>
+	<data name="PlanAhorro_PlazoOtro" xml:space="preserve"><value>Other (pick a date)</value></data>
+	<data name="PlanAhorro_FechaMetaTitulo" xml:space="preserve"><value>Target date</value></data>
+	<data name="PlanAhorro_FechaMetaFormato" xml:space="preserve"><value>Enter the date as YYYY-MM-DD</value></data>
+	<data name="PlanAhorro_FechaInvalidaTitulo" xml:space="preserve"><value>Invalid date</value></data>
+	<data name="PlanAhorro_FechaInvalidaDesc" xml:space="preserve"><value>Enter a future date as YYYY-MM-DD (e.g.: 2027-08-19).</value></data>
+	<data name="PlanAhorro_FrecuenciaTitulo" xml:space="preserve"><value>How often do you want to save?</value></data>
+	<data name="PlanAhorro_BorrarMetaConfirmacion" xml:space="preserve"><value>Are you sure you want to delete '{0}'?</value></data>
+	<data name="PlanAhorro_CuantoAhorrasteTitulo" xml:space="preserve"><value>How much did you save?</value></data>
+	<data name="PlanAhorro_CuantoAhorrasteDesc" xml:space="preserve"><value>Amount in {0} you set aside for '{1}'</value></data>
+	<data name="PlanAhorro_ListoTitulo" xml:space="preserve"><value>Done!</value></data>
+	<data name="PlanAhorro_ListoDesc" xml:space="preserve"><value>Your contribution of {0} {1} was logged.</value></data>
+	<data name="PlanAhorro_ErrorAlRegistrar" xml:space="preserve"><value>Error logging</value></data>
+	<data name="PlanAhorro_ErrorCargarPlan" xml:space="preserve"><value>Couldn't load your savings plan: {0}</value></data>
+	<data name="PlanAhorro_Meta" xml:space="preserve"><value>Goal: {0} {1} by {2}</value></data>
+	<data name="PlanAhorro_DebesAhorrar" xml:space="preserve"><value>You should save ~RD$ {0} every {1}</value></data>
+	<data name="PlanAhorro_LlevasAhorrado" xml:space="preserve"><value>You've saved: RD$ {0} ({1}% of the goal)</value></data>
+	<data name="PlanAhorro_VasBien" xml:space="preserve"><value>You're doing great: you're RD$ {0} ahead of plan.</value></data>
+	<data name="PlanAhorro_VasAtrasado" xml:space="preserve"><value>You're RD$ {0} behind plan.</value></data>
+
+	<!-- MovimientosPage -->
+	<data name="Movimientos_ErrorCargar" xml:space="preserve"><value>Couldn't load your transactions: {0}</value></data>
+	<data name="Movimientos_BalanceConvertido" xml:space="preserve"><value>{0} (converted)</value></data>
+	<data name="Movimientos_SinMovimientosProyeccion" xml:space="preserve"><value>No transactions yet to project.</value></data>
+	<data name="Movimientos_AhorroPromedioMensual" xml:space="preserve"><value>Average monthly savings: RD$ {0} ({1})</value></data>
+	<data name="Movimientos_BasadoEn1Mes" xml:space="preserve"><value>based on 1 month of history</value></data>
+	<data name="Movimientos_BasadoEnNMeses" xml:space="preserve"><value>based on {0} months of history</value></data>
+	<data name="Movimientos_Proyeccion3Meses" xml:space="preserve"><value>In 3 months, if you keep going: RD$ {0}</value></data>
+	<data name="Movimientos_Proyeccion6Meses" xml:space="preserve"><value>In 6 months, if you keep going: RD$ {0}</value></data>
+	<data name="Movimientos_ConsejoMasHistorial" xml:space="preserve"><value>With more months of history, this projection will be more accurate.</value></data>
+	<data name="Movimientos_Tip" xml:space="preserve"><value>Tip: '{0}' is your biggest expense (RD$ {1}). Cutting it by 15% would save you ~RD$ {2} more per month.</value></data>
+	<data name="Movimientos_TipoPregunta" xml:space="preserve"><value>What type of transaction?</value></data>
+	<data name="Movimientos_Ingreso" xml:space="preserve"><value>Income</value></data>
+	<data name="Movimientos_Gasto" xml:space="preserve"><value>Expense</value></data>
+	<data name="Movimientos_CategoriaTitulo" xml:space="preserve"><value>Category</value></data>
+	<data name="Movimientos_CategoriaEjemplo" xml:space="preserve"><value>E.g.: Food, Transport, Salary...</value></data>
+	<data name="Movimientos_DescripcionTitulo" xml:space="preserve"><value>Description</value></data>
+	<data name="Movimientos_DescripcionEjemplo" xml:space="preserve"><value>Brief detail (optional)</value></data>
+	<data name="Movimientos_MontoTitulo" xml:space="preserve"><value>Amount</value></data>
+	<data name="Movimientos_MontoEjemplo" xml:space="preserve"><value>E.g.: 500</value></data>
+	<data name="Movimientos_MontoInvalido" xml:space="preserve"><value>The amount must be a number greater than 0.</value></data>
+	<data name="Movimientos_PaisPregunta" xml:space="preserve"><value>Which country?</value></data>
+	<data name="Movimientos_PaisTitulo" xml:space="preserve"><value>Country</value></data>
+	<data name="Movimientos_PaisEscribe" xml:space="preserve"><value>Enter the country</value></data>
+	<data name="Movimientos_BorrarTitulo" xml:space="preserve"><value>Delete transaction</value></data>
+	<data name="Movimientos_BorrarConfirmacion" xml:space="preserve"><value>Are you sure you want to delete '{0}' ({1})?</value></data>
+	<data name="Login_Titulo" xml:space="preserve"><value>Iniciar sesión</value></data>
+	<data name="Login_CorreoPlaceholder" xml:space="preserve"><value>Correo electrónico</value></data>
+	<data name="Login_ContrasenaPlaceholder" xml:space="preserve"><value>Contraseña</value></data>
+	<data name="Login_OlvideContrasena" xml:space="preserve"><value>¿Olvidaste tu contraseña?</value></data>
+	<data name="Login_CrearCuenta" xml:space="preserve"><value>Crear cuenta</value></data>
+	<data name="Login_CompletaCorreoContrasena" xml:space="preserve"><value>Completa correo y contraseña.</value></data>
+	<data name="Login_ErrorIniciarSesion" xml:space="preserve"><value>No se pudo iniciar sesión: {0}</value></data>
+	<data name="Login_CompletaParaRegistrarte" xml:space="preserve"><value>Completa correo y contraseña para registrarte.</value></data>
+	<data name="Login_ContrasenaCorta" xml:space="preserve"><value>La contraseña debe tener al menos 6 caracteres.</value></data>
+	<data name="Login_ErrorCrearCuenta" xml:space="preserve"><value>No se pudo crear la cuenta: {0}</value></data>
+	<data name="Login_RecuperarTitulo" xml:space="preserve"><value>Recuperar contraseña</value></data>
+	<data name="Login_RecuperarDesc" xml:space="preserve"><value>Escribe el correo con el que creaste tu cuenta:</value></data>
+	<data name="Login_Enviar" xml:space="preserve"><value>Enviar</value></data>
+	<data name="Login_RevisaCorreoTitulo" xml:space="preserve"><value>Revisa tu correo</value></data>
+	<data name="Login_RevisaCorreoDesc" xml:space="preserve"><value>Te enviamos un enlace a {0} para que crees una nueva contraseña. Si no lo ves en unos minutos, revisa la carpeta de spam.</value></data>
+	<data name="Login_ErrorEnviarRecuperacion" xml:space="preserve"><value>No se pudo enviar el correo de recuperación: {0}</value></data>
+	<data name="Movimientos_TituloPantalla" xml:space="preserve"><value>Mis Movimientos</value></data>
+	<data name="Movimientos_BalanceActual" xml:space="preserve"><value>Balance actual</value></data>
+	<data name="Movimientos_AgregarMovimiento" xml:space="preserve"><value>+ Agregar movimiento</value></data>
+	<data name="Movimientos_PlanDeAhorro" xml:space="preserve"><value>🎯 Plan de ahorro</value></data>
+	<data name="Movimientos_FiltrosTitulo" xml:space="preserve"><value>Filtros</value></data>
+	<data name="Movimientos_FiltroCategoria" xml:space="preserve"><value>Categoría</value></data>
+	<data name="Movimientos_FiltroPais" xml:space="preserve"><value>País</value></data>
+	<data name="Movimientos_FiltroMoneda" xml:space="preserve"><value>Moneda</value></data>
+	<data name="Movimientos_GastosPorCategoria" xml:space="preserve"><value>Gastos por categoría</value></data>
+	<data name="Movimientos_ProyeccionTitulo" xml:space="preserve"><value>Proyección de ahorro</value></data>
+	<data name="Movimientos_ListaTitulo" xml:space="preserve"><value>Movimientos</value></data>
+	<data name="Movimientos_ListaInstruccion" xml:space="preserve"><value>Desliza un movimiento hacia la izquierda para editarlo o borrarlo</value></data>
+	<data name="Movimientos_SwipeEditar" xml:space="preserve"><value>Editar</value></data>
+	<data name="Movimientos_SwipeBorrar" xml:space="preserve"><value>Borrar</value></data>
+	<data name="Movimientos_CerrarSesion" xml:space="preserve"><value>Cerrar sesión</value></data>
+</root>

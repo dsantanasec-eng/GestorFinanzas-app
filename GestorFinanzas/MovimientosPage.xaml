@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:microcharts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             xmlns:admob="clr-namespace:Plugin.AdMob;assembly=Plugin.AdMob"
+             xmlns:strings="clr-namespace:GestorFinanzas.Strings"
+             x:Class="GestorFinanzas.MovimientosPage"
+             Title="{Binding [Movimientos_TituloPantalla], Source={x:Static strings:Tr.Instance}}">
+
+    <Grid RowDefinitions="*,Auto">
+
+        <ScrollView Grid.Row="0">
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="15" RowSpacing="12">
+
+                <!-- Resumen del balance -->
+                <Border Grid.Row="0" BackgroundColor="{StaticResource Primary}" Padding="15"
+                        StrokeShape="RoundRectangle 10">
+                    <VerticalStackLayout>
+                        <Label Text="{Binding [Movimientos_BalanceActual], Source={x:Static strings:Tr.Instance}}" TextColor="White" FontSize="14" HorizontalOptions="Center" />
+                        <Label x:Name="LblBalance" Text="RD$ 0.00" TextColor="White" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Botón agregar -->
+                <Button Grid.Row="1" x:Name="BtnAgregar" Text="{Binding [Movimientos_AgregarMovimiento], Source={x:Static strings:Tr.Instance}}" Clicked="OnAgregarClicked" />
+
+                <!-- Botón plan de ahorro -->
+                <Button Grid.Row="2" x:Name="BtnPlanAhorro" Text="{Binding [Movimientos_PlanDeAhorro], Source={x:Static strings:Tr.Instance}}" BackgroundColor="Transparent"
+                        TextColor="{StaticResource Primary}" BorderColor="{StaticResource Primary}" BorderWidth="1"
+                        Clicked="OnPlanAhorroClicked" />
+
+                <!-- Filtros -->
+                <Border Grid.Row="3" Padding="14" StrokeShape="RoundRectangle 12" Stroke="LightGray">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="{Binding [Movimientos_FiltrosTitulo], Source={x:Static strings:Tr.Instance}}" FontAttributes="Bold" FontSize="15" />
+
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="{Binding [Movimientos_FiltroCategoria], Source={x:Static strings:Tr.Instance}}" FontSize="12" TextColor="Gray" />
+                            <Border StrokeShape="RoundRectangle 8" Stroke="LightGray" Padding="10,2">
+                                <Picker x:Name="PickerCategoria" SelectedIndexChanged="OnFiltroCambiado" FontSize="15" />
+                            </Border>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="{Binding [Movimientos_FiltroPais], Source={x:Static strings:Tr.Instance}}" FontSize="12" TextColor="Gray" />
+                            <Border StrokeShape="RoundRectangle 8" Stroke="LightGray" Padding="10,2">
+                                <Picker x:Name="PickerPais" SelectedIndexChanged="OnFiltroCambiado" FontSize="15" />
+                            </Border>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="{Binding [Movimientos_FiltroMoneda], Source={x:Static strings:Tr.Instance}}" FontSize="12" TextColor="Gray" />
+                            <Border StrokeShape="RoundRectangle 8" Stroke="LightGray" Padding="10,2">
+                                <Picker x:Name="PickerMoneda" SelectedIndexChanged="OnFiltroCambiado" FontSize="15" />
+                            </Border>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Gráfico de gastos por categoría -->
+                <Border Grid.Row="4" Padding="12" StrokeShape="RoundRectangle 10" Stroke="LightGray">
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="{Binding [Movimientos_GastosPorCategoria], Source={x:Static strings:Tr.Instance}}" FontAttributes="Bold" FontSize="14" />
+                        <microcharts:ChartView x:Name="ChartGastos" HeightRequest="200" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Proyección de ahorro -->
+                <Border Grid.Row="5" Padding="12" StrokeShape="RoundRectangle 10" Stroke="LightGray">
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="{Binding [Movimientos_ProyeccionTitulo], Source={x:Static strings:Tr.Instance}}" FontAttributes="Bold" FontSize="14" />
+                        <Label x:Name="LblPromedioMensual" FontSize="12" TextColor="Gray" />
+                        <Label x:Name="LblProyeccion3Meses" FontSize="14" />
+                        <Label x:Name="LblProyeccion6Meses" FontSize="14" />
+                        <Label x:Name="LblConsejo" FontSize="12" TextColor="{StaticResource Primary}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Lista de movimientos -->
+                <VerticalStackLayout Grid.Row="6" Spacing="2">
+                    <Label Text="{Binding [Movimientos_ListaTitulo], Source={x:Static strings:Tr.Instance}}" FontAttributes="Bold" FontSize="14" />
+                    <Label Text="{Binding [Movimientos_ListaInstruccion], Source={x:Static strings:Tr.Instance}}" FontSize="11" TextColor="Gray" />
+                </VerticalStackLayout>
+                <CollectionView Grid.Row="7" x:Name="ListaMovimientos" HeightRequest="350">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="{Binding [Movimientos_SwipeEditar], Source={x:Static strings:Tr.Instance}}" BackgroundColor="#0984E3" Invoked="OnEditarSwipe" />
+                                        <SwipeItem Text="{Binding [Movimientos_SwipeBorrar], Source={x:Static strings:Tr.Instance}}" BackgroundColor="#D63031" Invoked="OnBorrarSwipe" />
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+                                <Grid Padding="10" ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto">
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding Categoria}" FontAttributes="Bold" />
+                                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding Descripcion}" FontSize="12" TextColor="Gray" />
+                                    <Label Grid.Row="0" Grid.RowSpan="2" Grid.Column="1"
+                                           Text="{Binding MontoFormateado}"
+                                           TextColor="{Binding ColorMonto}"
+                                           FontAttributes="Bold"
+                                           VerticalOptions="Center" />
+                                </Grid>
+                            </SwipeView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Cerrar sesión -->
+                <Button Grid.Row="8" x:Name="BtnCerrarSesion" Text="{Binding [Movimientos_CerrarSesion], Source={x:Static strings:Tr.Instance}}" BackgroundColor="Transparent" TextColor="Red" Clicked="OnCerrarSesionClicked" />
+
+            </Grid>
+        </ScrollView>
+
+        <!-- Banner de anuncios -->
+        <Grid Grid.Row="1" BackgroundColor="LightGray" HeightRequest="60" HorizontalOptions="Fill">
+            <admob:BannerAd x:Name="BannerMovimientos"
+                             AdUnitId="ca-app-pub-4227427045418783/7265940366"
+                             AdSize="Banner"
+                             WidthRequest="320"
+                             HeightRequest="50"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center" />
+        </Grid>
+
+    </Grid>
+
+</ContentPage>
